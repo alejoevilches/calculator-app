@@ -17,6 +17,7 @@
     --smallkey-text-color:hsl(221, 14%, 31%);
     --delreset-key-color:hsl(225, 21%, 49%);
     --delreset-shadowkey-color:hsl(224, 28%, 35%);
+    --keypad-color:hsl(223, 31%, 20%);
     --equal-color:hsl(6, 63%, 50%);
     --font:"League Spartan";
 }
@@ -32,13 +33,12 @@ body{
 
 .calc{
     height:max-content;
-    width:400px;
-    border:2px solid white;   
+    width:400px;  
 }
 
 .calc_logo{
     font-size:42px;
-    color:white;
+    color:var(--key-color);
     font-weight: 700;
     display:flex;
     align-items: center;
@@ -47,9 +47,15 @@ body{
 
 .calc_screen{
     background-color: var(--screen-color);
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
     height:80px;
     margin:0 10px;
     border-radius: 10px;
+    color:var(--key-color);
+    padding-right:10px;
+    font-size:32px;
 }
 
 .calc_buttons{
@@ -59,7 +65,10 @@ body{
     grid-column-gap: 5px;
     grid-row-gap: 20px;
     align-content: center;
-    margin:20px 0 20px 20px;
+    padding:20px 0 20px 20px;
+    margin:10px;
+    background-color:var(--keypad-color);
+    border-radius: 10px;
 }
 
 .calc_shortbuttons{
